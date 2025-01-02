@@ -1,0 +1,115 @@
+$primary-text: Quicksand, serif;
+$secondary-text: Zen Maru Gothic, serif;
+
+@mixin text(
+  $color,
+  $font-family,
+  $font-size,
+  $font-weight,
+  $text-decoration: null
+) {
+  color: $color;
+  font-family: $font-family;
+
+  @if $text-decoration != null {
+    text-decoration: $text-decoration;
+  }
+
+  @each $size, $value in $font-size {
+    &.--size-#{$size} {
+      font-size: $value;
+    }
+  }
+
+  @each $weight, $value in $font-weight {
+    &.--weight-#{$weight} {
+      font-weight: $value;
+    }
+  }
+}
+
+$font-sizes: (
+  8: 8px,
+  10: 10px,
+  11: 11px,
+  12: 12px,
+  14: 14px,
+  15: 15px,
+  16: 16px,
+  18: 18px,
+  20: 20px,
+  24: 24px,
+  25: 25px,
+  30: 30px,
+  35: 35px,
+  40: 40px,
+  50: 50px,
+  56: 56px,
+);
+
+$font-weights: (
+  100: 100,
+  200: 200,
+  300: 300,
+  400: 400,
+  500: 500,
+  600: 600,
+  700: 700,
+  800: 800,
+);
+
+._primary-text {
+  @include text(#fff, $primary-text, $font-sizes, $font-weights);
+}
+
+._secondary-text {
+  @include text(
+    rgba(211, 255, 0, 1),
+    $primary-text,
+    $font-sizes,
+    $font-weights
+  );
+}
+
+._tertiary-text {
+  @include text(
+    rgba(28, 50, 161, 1),
+    $primary-text,
+    $font-sizes,
+    $font-weights
+  );
+}
+
+._error-msg {
+  @include text(red, $primary-text, $font-sizes, $font-weights);
+}
+
+._red-text {
+  @include text(
+    rgba(229, 36, 61, 1),
+    $primary-text,
+    $font-sizes,
+    $font-weights
+  );
+
+  &.--underline {
+    text-decoration: underline;
+  }
+
+  &.--no-underline {
+    text-decoration: none;
+  }
+}
+
+._black-text {
+  @include text(#000, $primary-text, $font-sizes, $font-weights);
+}
+
+._grey-text {
+  @include text(
+    rgba(217, 217, 217, 1),
+    $primary-text,
+    $font-sizes,
+    $font-weights
+  );
+}

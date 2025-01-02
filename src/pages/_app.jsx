@@ -1,4 +1,4 @@
-import "@/styles/globals.css";
+import "@/scss/_base.scss";
 import { Provider } from "react-redux";
 import store from "@/store";
 
@@ -11,6 +11,7 @@ import "react-toastify/dist/ReactToastify.css";
 
 // PrimeProvider
 import { PrimeReactProvider } from "primereact/api";
+import "primereact/resources/themes/lara-light-cyan/theme.css";
 
 export default function App({ Component, pageProps }) {
   return (

@@ -1,0 +1,10 @@
+$primary-color: var(--secondary-bg);
+$secondary-color: var(--orange-bg);
+$white: var(--primary-bg);
+$font-family: Quicksand, serif;
+$border-radius: 15px;
+
+@mixin button($bg-color, $text-color, $hover-color){
+  
+}
+

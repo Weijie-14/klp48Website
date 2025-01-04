@@ -11,6 +11,7 @@
   --primary: #fff;
   --secondary: #008800;
   --black: #343434;
+  --orange: #f7790c;
 
   //Linear Gradient
   --orange-linear: linear-gradient(90deg, var(--orange-bg), #ffbb3e);
@@ -23,7 +24,8 @@
   margin: 0;
 }
 
+html,
 body {
-  background-color: var(--root-background);
+  background: var(--root-background);
   font-family: Quicksand, serif;
 }

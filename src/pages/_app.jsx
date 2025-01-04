@@ -1,4 +1,4 @@
-import "@/scss/_base.scss";
+import "@/scss/style.scss";
 import { Provider } from "react-redux";
 import store from "@/store";
 
@@ -8,6 +8,7 @@ import { appWithTranslation } from "next-i18next";
 // Toastify for notification
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import "bootstrap/dist/css/bootstrap.min.css";
 
 // PrimeProvider
 import { PrimeReactProvider } from "primereact/api";

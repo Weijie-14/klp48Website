@@ -13,20 +13,10 @@ export default function Header() {
   const dispatch = useDispatch();
   const [isScrolled, setIsScrolled] = useState(false);
 
-  // const checkScroll = () => {
-  //   if (window.scrollY > 0) {
-  //     setIsScrolled(true);
-  //   } else {
-  //     setIsScrolled(false);
-  //   }
-  // };
-
-  // useEffect(() => {
-  //   window.addEventListener("scroll", checkScroll);
-  //   return () => {
-  //     window.removeEventListener("scroll", checkScroll);
-  //   };
-  // }, []);
+  const toggleMenu = () => {
+    const transform = document.querySelector(".--orange-burger-menu");
+    transform.classList.toggle("change");
+  };
 
   return (
     <header className="main-header-container">
@@ -41,7 +31,7 @@ export default function Header() {
         </div>
 
         <div className="d-flex justify-content-end align-items-center gap-3">
-          <Button className="--orange-burger-menu">
+          <Button className="--orange-burger-menu" onClick={toggleMenu}>
             <div className="d-flex flex-column align-items-center gap-1">
               <div className="bar1"></div>
               <div className="bar2"></div>

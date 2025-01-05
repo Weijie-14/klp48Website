@@ -4,12 +4,29 @@
 @import "base";
 @import "elements/button";
 
-.bar1,
-.bar2,
-.bar3 {
+.--orange-burger-menu .bar1,
+.--orange-burger-menu .bar2,
+.--orange-burger-menu .bar3 {
   width: 38px;
   height: 3px;
   background: var(--primary-bg);
   margin: 2px 0;
   transition: 0.4s;
+}
+
+.--orange-burger-menu.change .bar1 {
+  transform: translate(0, 11px) rotate(-45deg);
+}
+
+.--orange-burger-menu.change .bar2 {
+  opacity: 0;
+}
+
+.--orange-burger-menu.change .bar3 {
+  transform: translate(0, -11px) rotate(45deg);
+}
+
+.klp-banner-img {
+  width: 100%;
+  height: 100%;
 }

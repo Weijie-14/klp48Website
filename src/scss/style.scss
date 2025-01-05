@@ -2,3 +2,14 @@
 @import "components/layout";
 @import "font";
 @import "base";
+@import "elements/button";
+
+.bar1,
+.bar2,
+.bar3 {
+  width: 38px;
+  height: 3px;
+  background: var(--primary-bg);
+  margin: 2px 0;
+  transition: 0.4s;
+}

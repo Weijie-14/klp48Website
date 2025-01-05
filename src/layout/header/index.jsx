@@ -5,6 +5,7 @@ import useWindowWidth from "@/hook/useWindowWidth";
 import { useDispatch, useSelector } from "react-redux";
 import { useEffect, useState } from "react";
 import { useRouter } from "next/router";
+import Translations from "@/utils/Translations";
 
 export default function Header() {
   const { isMobileView } = useWindowWidth();
@@ -31,13 +32,22 @@ export default function Header() {
     <header className="main-header-container">
       <div className="d-flex justify-content-between align-items-center">
         <div className="d-flex justify-content-center align-items-center gap-3">
-          <label className="_tertiary-text --size-12">awdada</label>
-          <label className="_tertiary-text --size-12">awddada</label>
+          <Button className="--secondary-btn">
+            <Translations text="JOIN" />
+          </Button>
+          <Button className="--tertiary-btn">
+            <Translations text="LOGIN" />
+          </Button>
         </div>
 
-        <div className="d-flex justify-content-center align-items-center gap-3">
-          <label className="_secondary-text --size-12">awdada</label>
-          <label className="_secondary-text --size-12">awdada</label>
+        <div className="d-flex justify-content-end align-items-center gap-3">
+          <Button className="--orange-burger-menu">
+            <div className="d-flex flex-column align-items-center gap-1">
+              <div className="bar1"></div>
+              <div className="bar2"></div>
+              <div className="bar3"></div>
+            </div>
+          </Button>
         </div>
       </div>
     </header>

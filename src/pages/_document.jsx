@@ -16,6 +16,8 @@ export default function Document() {
           href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Quicksand:wght@300..700&family=Zen+Maru+Gothic&display=swap"
           rel="stylesheet"
         />
+        <link rel="shortcut icon" href="/favicon.ico" />
+        <title>KLP48</title>
       </Head>
       <body>
         <Main />

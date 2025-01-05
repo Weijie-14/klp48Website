@@ -1,10 +1,115 @@
 $primary-color: var(--secondary-bg);
 $secondary-color: var(--orange-bg);
 $white: var(--primary-bg);
+$orange-linear: var(--orange-linear);
+$orange-linear2: var(--orange-linear2);
 $font-family: Quicksand, serif;
 $border-radius: 15px;
 
-@mixin button($bg-color, $text-color, $hover-color){
-  
+@mixin button(
+  $bg-color,
+  $text-color,
+  $border-color,
+  $hover-bg-color,
+  $hover-color,
+  $hover-border-color,
+  $radius,
+  $width,
+  $height
+) {
+  background: $bg-color;
+  color: $text-color;
+  border: $border-color;
+  border-radius: $radius;
+  font-family: $font-family;
+  font-size: 14px;
+  font-weight: 700;
+  width: $width;
+  height: $height;
+  cursor: pointer;
+  text-align: center;
+  transition: background-color 0.3s;
+
+  &:hover {
+    background-color: $hover-bg-color;
+    color: $hover-color;
+    border: $hover-border-color;
+  }
+
+  &:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+  }
 }
 
+button {
+  &.--primary-btn {
+    @include button(
+      $primary-color,
+      $white,
+      none,
+      $white,
+      $primary-color,
+      2px solid $primary-color,
+      $border-radius,
+      100%,
+      100%
+    );
+  }
+
+  &.--secondary-btn {
+    @include button(
+      $secondary-color,
+      $white,
+      2px solid $secondary-color,
+      $white,
+      $secondary-color,
+      2px solid $secondary-color,
+      $border-radius,
+      100%,
+      100%
+    );
+  }
+
+  &.--tertiary-btn {
+    @include button(
+      $white,
+      $secondary-color,
+      2px solid $secondary-color,
+      $secondary-color,
+      $white,
+      none,
+      $border-radius,
+      100%,
+      100%
+    );
+  }
+
+  &.--orange-linear2-btn {
+    @include button(
+      $orange-linear2,
+      $white,
+      2px solid $secondary-color,
+      $white,
+      $orange-linear2,
+      none,
+      0px,
+      100%,
+      100%
+    );
+  }
+
+  &.--orange-burger-menu {
+    @include button(
+      $orange-linear2,
+      $white,
+      none,
+      $white,
+      $orange-linear2,
+      none,
+      0px,
+      85px,
+      85px
+    );
+  }
+}

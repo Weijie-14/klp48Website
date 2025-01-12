@@ -7,6 +7,7 @@ import { useRouter } from "next/router";
 import useWindowWidth from "@/hook/useWindowWidth";
 import { toastError, toastSuccess } from "@/utils/utils";
 import Header from "./header";
+import Footer from "./footer";
 
 function MainLayout({ children }) {
   const dispatch = useDispatch();
@@ -17,6 +18,7 @@ function MainLayout({ children }) {
     <div className="main-app">
       <Header />
       <div className="content-section">{children}</div>
+      <Footer />
     </div>
   );
 }

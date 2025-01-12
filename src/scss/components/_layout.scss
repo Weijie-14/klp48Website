@@ -16,3 +16,15 @@
   height: 100%;
   padding-left: 20px;
 }
+
+.main-footer-container {
+  background-color: transparent;
+  width: 100%;
+  padding: 35px 50px 20px;
+
+  .footer-list {
+    list-style-type: none;
+    display: flex;
+    gap: 10px;
+  }
+}

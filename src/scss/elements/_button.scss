@@ -1,6 +1,7 @@
 $primary-color: var(--secondary-bg);
 $secondary-color: var(--orange-bg);
 $white: var(--primary-bg);
+$yellow: var(--yellow-bg);
 $orange-linear: var(--orange-linear);
 $orange-linear2: var(--orange-linear2);
 $font-family: Quicksand, serif;
@@ -110,6 +111,20 @@ button {
       0px,
       85px,
       85px
+    );
+  }
+
+  &.--yellow-btn {
+    @include button(
+      $yellow,
+      $primary-color,
+      none,
+      $yellow,
+      $primary-color,
+      none,
+      $border-radius,
+      100%,
+      100%
     );
   }
 }

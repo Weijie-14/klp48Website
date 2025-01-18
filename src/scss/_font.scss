@@ -63,12 +63,7 @@ $font-weights: (
 }
 
 ._secondary-text {
-  @include text(
-    rgba(211, 255, 0, 1),
-    $primary-text,
-    $font-sizes,
-    $font-weights
-  );
+  @include text(var(--secondary), $primary-text, $font-sizes, $font-weights);
 }
 
 ._tertiary-text {

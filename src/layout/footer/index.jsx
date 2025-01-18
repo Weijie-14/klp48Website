@@ -47,6 +47,56 @@ export default function Footer() {
     },
   ];
 
+  const footerList2 = [
+    {
+      label: "GALLERY",
+      linkRedirect: "/gallery",
+    },
+    {
+      label: "SP MOVIE",
+      linkRedirect: "/sp-movie",
+    },
+    {
+      label: "VOICE",
+      linkRedirect: "/voice",
+    },
+    {
+      label: "STAFF BLOG",
+      linkRedirect: "/staff-blog",
+    },
+    {
+      label: "SUBSCRIBE",
+      linkRedirect: "/subscribe",
+    },
+  ];
+
+  const footerList3 = [
+    {
+      label: "Company",
+      linkRedirect: "/company",
+    },
+    {
+      label: "Contact",
+      linkRedirect: "/contact",
+    },
+    {
+      label: "Privacy Policy",
+      linkRedirect: "/privacy-policy",
+    },
+    {
+      label: "Terms of Use",
+      linkRedirect: "/term-of-use",
+    },
+    {
+      label: "Refund Policy",
+      linkRedirect: "/refund-policy",
+    },
+    {
+      label: "Vendor",
+      linkRedirect: "/vendor",
+    },
+  ];
+
   return (
     <footer className="main-footer-container">
       <div className="d-flex justify-content-between align-items-center">
@@ -72,15 +122,31 @@ export default function Footer() {
 
           <ul className="footer-list">
             {footerList.map((item, index) => (
-              <li
-                className=""
-                key={index}
-                onClick={() => router.push(item.linkRedirect)}
-              >
+              <li key={index} onClick={() => router.push(item.linkRedirect)}>
                 {item.label}
               </li>
             ))}
           </ul>
+
+          <ul className="footer-list2">
+            {footerList2.map((item, index) => (
+              <li key={index} onClick={() => router.push(item.linkRedirect)}>
+                {item.label}
+              </li>
+            ))}
+          </ul>
+
+          <ul className="footer-list3">
+            {footerList3.map((item, index) => (
+              <li key={index} onClick={() => router.push(item.linkRedirect)}>
+                {item.label}
+              </li>
+            ))}
+          </ul>
+
+          <p className="d-flex justify-content-end _secondary-text --size-12 --weight-400">
+            &copy;KLP48
+          </p>
         </div>
       </div>
     </footer>
